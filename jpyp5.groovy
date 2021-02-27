@@ -6,15 +6,13 @@ def getAcrLoginServer(def acrSettingsJson) {
 }
 
 node {
- withEnv(['AZURE_SUBSCRIPTION_ID=783ed336-9aff-4c71-b6c0-8efb879033a5',
-        'AZURE_TENANT_ID=cc0361ca-deca-4db3-b421-ee1ca53c7f00']) {
     stage('init') {
       checkout scm
     }
   
-    stage('build') {
-      sh 'mvn clean package'
-    }
+    //stage('build') {
+    //  sh 'mvn clean package'
+    //}
   
     stage('deploy') {
 	    def webAppResourceGroup = 'testnsv'
