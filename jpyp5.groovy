@@ -5,7 +5,7 @@ def getAcrLoginServer(def acrSettingsJson) {
   return acrSettings.loginServer
 }
 
-node {
+node{
     stage('init') {
       checkout scm
     }
@@ -53,4 +53,4 @@ node {
       }
     }
   }
-}
+
