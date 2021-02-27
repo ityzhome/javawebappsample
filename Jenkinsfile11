@@ -17,7 +17,7 @@ node {
     }
   
     stage('deploy') {
-	   sh az login --service-principal --username 6a174562-61ac-45e2-b6b9-334a797c00ce --password SWKn1aWnNy-tu_Jn28_~GVdd.5y1gyp2eM --tenant cc0361ca-deca-4db3-b421-ee1ca53c7f00
+	   sh az login --service-principal --username '6a174562-61ac-45e2-b6b9-334a797c00ce' --password 'SWKn1aWnNy-tu_Jn28_~GVdd.5y1gyp2eM' --tenant 'cc0361ca-deca-4db3-b421-ee1ca53c7f00'
       def webAppResourceGroup = 'testnsv'
       def webAppName = 'testnsv'
       def acrName = 'testnsv'
