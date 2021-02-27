@@ -22,12 +22,13 @@ node {
       def acrName = 'testnsv'
       def imageName = 'monimage'
       // generate version, it's important to remove the trailing new line in git describe output
+         
+       sh az login --service-principal --username 6a174562-61ac-45e2-b6b9-334a797c00ce --password SWKn1aWnNy-tu_Jn28_~GVdd.5y1gyp2eM --tenant cc0361ca-deca-4db3-b421-ee1ca53c7f00
       def version = sh script: 'git describe | tr -d "\n"', returnStdout: true
       withCredentials([usernamePassword(credentialsId: 'thejenkinsID', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
         // login Azure
         sh '''
-          az login --service-principal --username 6a174562-61ac-45e2-b6b9-334a797c00ce --password SWKn1aWnNy-tu_Jn28_~GVdd.5y1gyp2eM --tenant cc0361ca-deca-4db3-b421-ee1ca53c7f00
-          az account set -s $AZURE_SUBSCRIPTION_ID
+                    az account set -s $AZURE_SUBSCRIPTION_ID
         '''
          // get login server
         def acrSettingsJson = sh script: "az acr show -n $acrName", returnStdout: true
