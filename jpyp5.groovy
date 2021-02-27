@@ -17,7 +17,7 @@ node {
     }
   
     stage('deploy') {
-	  def webAppResourceGroup = 'testnsv'
+	    def webAppResourceGroup = 'testnsv'
       def webAppName = 'testnsv'
       def acrName = 'testnsv'
       def imageName = 'monimage'
