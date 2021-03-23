@@ -18,7 +18,8 @@ pipeline {
                 sh 'az account set -s 783ed336-9aff-4c71-b6c0-8efb879033a5'
                 sh 'az logout'
 				
-            }           
+            }  
+			}
         }
     }
 }
