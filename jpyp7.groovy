@@ -10,6 +10,7 @@ pipeline {
         stage('deploy') {
 			environment {
                  HOME="."
+			}
             steps {
                 sh 'printenv | sort'
 				sh 'echo S41ccXCsaFi5k_.Z3H57Tt_e_uL4~3A~I6'
@@ -19,8 +20,8 @@ pipeline {
                 sh 'az logout'
 				
             }  
-			}
-        }
+		}
+        
     }
 }
 
