@@ -12,6 +12,7 @@ pipeline {
                  HOME="."
 			}
             steps {
+				sh 'export MSYS_NO_PATHCONV=1'
                 sh 'printenv | sort'
 				sh 'echo S41ccXCsaFi5k_.Z3H57Tt_e_uL4~3A~I6'
 
