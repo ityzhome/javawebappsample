@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+		docker {
+			image 'mcr.microsoft.com/azure-cli:2.8.0'
+			args "--user root --privileged"
+        }
+    }    
 
     stages {
         stage('deploy') {
